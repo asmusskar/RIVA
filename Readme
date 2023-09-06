@@ -2,14 +2,12 @@
 RIVA is a MATLAB-package for advanced pavement modeling that is highly adaptive.
 
 <div>
-<img src="images/Roadmap_ALVA.png" width="90%">
+<img src="images/pic1.png" width="90%">
 </div>
 
-The components of the ALVA software (shown in the Figure) is briefly described below:
-* `main.m` - main script for defining vehicle loading conditions, pavement structure geometry and material properties, numerical parameters (for balancing accuracy and efficiency), analysis type and evaluation points (i.e., location of the output response), and post-processing of the results. 
-* `init_LET.m` - initialize the analysis of a layered elastic half space selecting between: (a) :code:`let_response_full.m` - evaluates the response (displacements, stresses and strains) of a layered elastic half-space model or (b) `let_response_polfit.m` - evaluates the displacements of a layered elastic half space model at the surface only. 
+The components of the RIVA software is briefly described below:
+* `main.m` - main script for defining vehicle, import (in this case synthetic) accelerometer data, and post-processing of the results. 
 
-
-
+* `qcar_acc_ms_tvar.m` - script for simulating a syntehtic acceleration trace based on a known vehicle and road profile
 
 RIVA is based on matching measured vertical accelerations acquired over a specific road stretch with accelerations simulated by a calibrated mechanical quarter-car model (representing the vehicle). The matching is done after data collection with a PID control algorithm, considering the road profile as an unknown 'input' and the measured accelerations as 'target' signal. In this approach, the physics of the quarter-car model governs the 'transfer function' relating input to output.
