@@ -1,1 +1,1 @@
-
+The proposed method for profile inversion is based on matching measured vertical accelerations acquired over a specific road stretch with accelerations simulated by a calibrated mechanical quarter-car model representing the vehicle. The matching is done post data collection (i.e., not in real-time) with a PID control algorithm, considering the road profile as an unknown/adjustable 'input' and the measured accea 'target' signal. In this approach, the physics of the quarter-car model governs the 'transfer function' relating input to output.
