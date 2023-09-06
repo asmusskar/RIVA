@@ -2,7 +2,7 @@
 RIVA is a MATLAB-package for advanced pavement modeling that is highly adaptive.
 
 <div>
-<img src="images/pic1.png" width="90%">
+<img src="pics/pic1.png" width="90%">
 </div>
 
 The components of the RIVA software is briefly described below:
