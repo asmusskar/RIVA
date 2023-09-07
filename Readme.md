@@ -1,5 +1,5 @@
 ## RIVA
-RIVA is a MATLAB-package for advanced pavement modeling that is highly adaptive.
+RIVA is a MATLAB-package for road profile inversion from in-vehicle accelerometer readings.
 
 <div>
 <img src="pics/pic1.png" width="90%">
