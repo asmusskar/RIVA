@@ -39,10 +39,10 @@ The script focuses on an ideal scenario where the data used as input is syntheti
 <img src="pics/pic1.png" width="85%">
 </div>
 <p>
- <b>Figure 3:</b> Road profile used forverification: (a) synthetic road events, and (b) road events randomly distributed over a 50 m section. The original synthetic road profile and the filtered input signal are shown as a black line and a blue line, respectively.
+ <b>Figure 3:</b> Road events randomly distributed over a 50 m section. The original synthetic road profile and the filtered input signal are shown as a black line and a blue line, respectively.
 </p>
 
-Figure 4 presents the outcome of the road profile inversion. The synthetically generated 'true' acceleratio and input road profile are shown as solid grey lines. The corresponding calculated acceleration $\ddot{z}_s^c$ and the inverted road profile are shown as a black dashed lines. As can be seen, the signals overlap, indicating that Equation \ref{eqn:optalg} was optimally solved, and that the proposed inversion method works with synthetic inputs.
+Figure 4 presents the outcome of the road profile inversion. The synthetically generated 'true' acceleration and the input road profile are shown as solid grey lines. The corresponding calculated acceleration and the inverted road profile are shown as a black dashed lines. 
 
 <div>
 <img src="pics/pic3.png" width="85%">
@@ -50,6 +50,8 @@ Figure 4 presents the outcome of the road profile inversion. The synthetically g
 <p>
  <b>Figure 3:</b> Road profile used forverification: (a) synthetic road events, and (b) road events randomly distributed over a 50 m section. The original synthetic road profile and the filtered input signal are shown as a black line and a blue line, respectively.
 </p>
+
+As can be seen from Figure 4, the signals overlap, indicating that optimization problem was optimally solved.
 
 ## Installation
 * Download the package on your PC. 
