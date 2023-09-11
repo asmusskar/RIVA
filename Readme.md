@@ -5,8 +5,10 @@ RIVA is based on matching measured vertical accelerations acquired over a specif
 
 <div>
 <img src="pics/RIVA_f2.png" width="90%">
-  <b>Figure 1:</b> Block diagram of the closed feedback loop PID controller utilised in RIVA. 
 </div>
+<p>
+ <b>Figure 1:</b> Block diagram of the closed feedback loop PID controller utilised in RIVA. 
+</p>
 
 The components of the RIVA software is briefly described below:
 * `main.m` - main script for defining vehicle, import (in this case synthetic) accelerometer data, and post-processing of the results. 
