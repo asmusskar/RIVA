@@ -15,7 +15,7 @@ The components of the RIVA software is briefly described below:
 
 * `qcar_acc_ms_tvar.m` - script for simulating a syntehtic acceleration trace based on a known vehicle and road profile.
 
-* `PID_profile_inv_tvar.m` - script for inverted road profile based on measured accelerations.
+* `PID_profile_inv_tvar.m` - script for road profile inversion based on measured accelerations.
 
 *  `PID_profile_out_tvar.m` - script for plotting final optimal solution after the optimization process.
 
