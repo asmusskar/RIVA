@@ -2,7 +2,7 @@
 RIVA is a MATLAB-package for road profile inversion from in-vehicle accelerometer readings.
 
 <div>
-<img src="pics/pic1.png" width="90%">
+<img src="pics/RIVA_f2.png" width="90%">
 </div>
 
 The components of the RIVA software is briefly described below:
