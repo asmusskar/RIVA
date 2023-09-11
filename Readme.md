@@ -15,7 +15,11 @@ The components of the RIVA software is briefly described below:
 
 * `qcar_acc_ms_tvar.m` - script for simulating a syntehtic acceleration trace based on a known vehicle and road profile.
 
-* `PID_profile_inv_tvar.m` - script for simulating a syntehtic acceleration trace based on a known vehicle and road profile.
+* `PID_profile_inv_tvar.m` - script for inverted road profile based on measured accelerations.
+
+*  `PID_profile_out_tvar.m` - script for plotting final optimal solution after the optimization process.
+
+*  `pid_control.mat` - road profile data.
 
 ## Synthetic example and verification
 The example script (i.e., 'main.m' script) provided is named 'RIVA_insilico.m'. This script provides a syntetic verification of the RIVA package. The purpose is to ensure that the proposed method can offer favorable convergence conditions for an optimization algorithm. Such a verification effort is a necessary first step before applying the profile inversion method to real field-collected data, that are noisy and may include errors. Hence, the script focuses on an ideal scenario where synthetically manufactured data is used as input
@@ -25,7 +29,7 @@ The example script (i.e., 'main.m' script) provided is named 'RIVA_insilico.m'. 
 * Open MATLAB
 * Go to the directory 'RIVA'
 * add the different directories of the RIVA on your MATLAB path — Now you are ready to run the validation examples provided and generate your own analysis. 
-* ALVA is compatible with [OCTAVE](https://www.gnu.org/software/octave/index)
+* RIVA is compatible with [OCTAVE](https://www.gnu.org/software/octave/index)
 
 For example validation of the library can be launched with
 
