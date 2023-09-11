@@ -1,16 +1,16 @@
 # RIVA
-Road-profile Inversion based on in-Vehicle Accelerations (RIVA) is a MATLAB-package for road profile estimation based on data from vertical acceleration traces.
+Road-profile Inversion based on in-Vehicle Accelerations (RIVA) is a MATLAB package for road profile estimation based on data from vertical acceleration traces.
 
-The framework for performing the inversion is visualized in Figure 1; the scheme refers to a vehicle that is instrumented with an accelerometer positioned near the centre-line close to the front axle. The inversion is achieved using a PID controller algorithm with a calibrated quarter-car model; it can take any synthetic or field-measured acceleration and speed signal as input. The outcome of this process is followed by a filtering step to remove long wavelengths. A detailed description of the proposed methodology including model verification and validation of RIVA is presented in [Skar and Levenberg (2023)].
+The scheme in Figure 1 visualizes the framework of RIVA; it shows a vehicle with an accelerometer positioned near the center line, close to the front axle. The inversion is achieved using a PID controller algorithm with a calibrated quarter-car model; it can take any synthetic or field-measured acceleration and speed signal as input. The outcome of this process is followed by a filtering step to remove long wavelengths. A detailed description of the proposed methodology, including model verification and validation of RIVA is presented in [Skar and Levenberg (2023)].
 
 <div>
 <img src="pics/RIVA_f1.png" width="85%">
 </div>
 <p>
- <b>Figure 1:</b> Overview of the proposed method.
+ <b>Figure 1:</b> Overview of the RIVA framework.
 </p>
 
-RIVA is based on matching measured vertical accelerations acquired over a specific road stretch with accelerations simulated by the calibrated quarter-car model. The matching is done with a PID control algorithm (see Figure 2), considering the road profile as an unknown 'input' and the measured accelerations as 'target' signal. The physics of the quarter-car model governs the 'transfer function' relating input to output. 
+RIVA is based on matching measured vertical accelerations acquired over a specific road stretch with accelerations simulated by the calibrated quarter-car model. The matching is done with a PID control algorithm (see Figure 2), considering the road profile as an unknown 'input' and the measured accelerations as a 'target' signal. The physics of the quarter-car model governs the 'transfer function' relating input to output. 
 
 <div>
 <img src="pics/RIVA_f2.png" width="85%">
@@ -31,9 +31,9 @@ The components of the RIVA software is briefly described below:
 *  `pid_control.mat` - road profile data.
 
 ## Synthetic example and verification
-The example script (i.e., 'main.m' script) provided is named 'RIVA_insilico.m'. This script provides a syntetic verification of the RIVA MATLAB-package, with the purpose to ensure that the code/method offers favorable convergence conditions for an optimization algorithm. 
+The example script (i.e., 'main.m' script) provided is named 'RIVA_insilico.m'. This script offers a synthetic verification of the RIVA MATLAB package to ensure that the code/method offers favorable convergence conditions for an optimization algorithm. 
 
-The script focuses on an ideal scenario where the data used as input is synthetically manufactured. The filtered input signal (i.e., road profile) is shown as a dashed blue line in Figure 3; it is slightly smoothed compared to the original signal due to the ‘enveloping’ effect of the tire (i.e., length of the tire-pavement contact area). The result of this effect is highlighted in the magnified view in the right top corner of Figure 3.
+The script focuses on an ideal scenario where the data used as input is synthetically manufactured. The filtered input signal (i.e., road profile) is shown as a dashed blue line in Figure 3; it is slightly smoothed compared to the original signal due to the ‘enveloping’ effect of the tire (i.e., length of the tire-pavement contact area). The result of this effect is highlighted in the magnified view in the top right corner of Figure 3.
 
 <div>
 <img src="pics/pic1.png" width="85%">
@@ -42,29 +42,29 @@ The script focuses on an ideal scenario where the data used as input is syntheti
  <b>Figure 3:</b> Road events randomly distributed over a 50 m section. The original synthetic road profile and the filtered input signal are shown as a black line and a blue line, respectively.
 </p>
 
-Figure 4 presents the outcome of the road profile inversion. The synthetically generated 'true' acceleration and the input road profile are shown as solid grey lines. The corresponding calculated acceleration and the inverted road profile are shown as a black dashed lines. 
+Figure 4 presents the outcome of the road profile inversion. The synthetically generated 'true' acceleration and the input road profile are shown as solid red lines. The corresponding calculated acceleration and the inverted road profile are shown as blue dashed lines. 
 
 <div>
 <img src="pics/pic2.png" width="85%">
 </div>
 <p>
- <b>Figure 4:</b> Road profile used forverification: (a) synthetic road events, and (b) road events randomly distributed over a 50 m section. The original synthetic road profile and the filtered input signal are shown as a black line and a blue line, respectively.
+ <b>Figure 4:</b> Comparing true and calculated signals: vertical acceleration traces (top), and inverted road profile (bottom).
 </p>
 
-As can be seen from Figure 4, the signals overlap, indicating that optimization problem was optimally solved.
+As can be seen from Figure 4, the signals overlap, indicating that the optimization problem was optimally solved.
 
 ## Installation
-* Download the package on your PC. 
+* Download the package on your PC
 * Open MATLAB
 * Go to the directory 'RIVA'
-* add the different directories of the RIVA on your MATLAB path — Now you are ready to run the validation examples provided and generate your own analysis. 
+* add the different directories of the RIVA on your MATLAB path — Now you are ready to run the validation examples provided and generate your own analysis
 * RIVA is compatible with [OCTAVE](https://www.gnu.org/software/octave/index)
 
 For example validation of the library can be launched with
 
 ``` matlab
 addpath("basic")
-addpath("examples")
+addpath("example")
 RIVA_insilico
 ```
 
