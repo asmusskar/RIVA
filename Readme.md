@@ -1,7 +1,7 @@
 # RIVA
-Road-profile Inversion based on in-Vehicle Accelerations (RIVA) is a MATLAB-package for road profile inversion from in-vehicle accelerometer readings.
+Road-profile Inversion based on in-Vehicle Accelerations (RIVA) is a MATLAB-package for road profile estimation based on data from vertical acceleration traces.
 
-The proposed framework for performing road profile inversion is visualized in Figure 1; the scheme refers to a passenger car that is instrumented with an accelerometer positioned near the centre-line close to the front axle. The inversion is achieved using a PID controller algorithm with the calibrated mechanical model; it can take any synthetic or field-measured acceleration and speed signal as input. The outcome of this process is followed by a filtering step to remove long wavelengths.
+The framework for performing the inversion is visualized in Figure 1; the scheme refers to a vehicle that is instrumented with an accelerometer positioned near the centre-line close to the front axle. The inversion is achieved using a PID controller algorithm with a calibrated quarter-car model; it can take any synthetic or field-measured acceleration and speed signal as input. The outcome of this process is followed by a filtering step to remove long wavelengths. A detailed description of the proposed methodology including model verification and validation of RIVA is presented in [Skar and Levenberg (2023)].
 
 <div>
 <img src="pics/RIVA_f1.png" width="85%">
@@ -10,7 +10,7 @@ The proposed framework for performing road profile inversion is visualized in Fi
  <b>Figure 1:</b> Overview of the proposed method.
 </p>
 
-RIVA is based on matching measured vertical accelerations acquired over a specific road stretch with accelerations simulated by a calibrated quarter-car model. The matching is done with a PID control algorithm (see Figure 2), considering the road profile as an unknown 'input' and the measured accelerations as 'target' signal. In this approach, the physics of the quarter-car model governs the 'transfer function' relating input to output. A detailed description of the proposed methodology including model verification and validation of RIVA is presented in [Skar and Levenberg (2023)]. 
+RIVA is based on matching measured vertical accelerations acquired over a specific road stretch with accelerations simulated by the calibrated quarter-car model. The matching is done with a PID control algorithm (see Figure 2), considering the road profile as an unknown 'input' and the measured accelerations as 'target' signal. The physics of the quarter-car model governs the 'transfer function' relating input to output. 
 
 <div>
 <img src="pics/RIVA_f2.png" width="85%">
@@ -31,13 +31,24 @@ The components of the RIVA software is briefly described below:
 *  `pid_control.mat` - road profile data.
 
 ## Synthetic example and verification
-The example script (i.e., 'main.m' script) provided is named 'RIVA_insilico.m'. This script provides a syntetic verification of the RIVA package. The purpose is to ensure that the proposed method can offer favorable convergence conditions for an optimization algorithm. Such a verification effort is needed as a first step before applying the method to field-collected data, that are noisy and may include errors. Hence, the script focuses on an ideal scenario where synthetically manufactured data is used as input, as shown in Figure 3a.
+The example script (i.e., 'main.m' script) provided is named 'RIVA_insilico.m'. This script provides a syntetic verification of the RIVA MATLAB-package, with the purpose to ensure that the code/method offers favorable convergence conditions for an optimization algorithm. 
+
+The script focuses on an ideal scenario where the data used as input is synthetically manufactured. The filtered input signal (i.e., road profile) is shown as a dashed blue line in Figure 3; it is slightly smoothed compared to the original signal due to the ‘enveloping’ effect of the tire (i.e., length of the tire-pavement contact area). The result of this effect is highlighted in the magnified view in the right top corner of Figure 3.
 
 <div>
 <img src="pics/pic1.png" width="85%">
 </div>
 <p>
- <b>Figure 3:</b> Road profiles used forverification: (a) synthetic road events, and (b) road events randomly distributed over a 50 m section. The original synthetic road profile and the filtered input signal are shown as a black line and a grey line, respectively.
+ <b>Figure 3:</b> Road profile used forverification: (a) synthetic road events, and (b) road events randomly distributed over a 50 m section. The original synthetic road profile and the filtered input signal are shown as a black line and a blue line, respectively.
+</p>
+
+Figure 4 presents the outcome of the road profile inversion. The synthetically generated 'true' acceleratio and input road profile are shown as solid grey lines. The corresponding calculated acceleration $\ddot{z}_s^c$ and the inverted road profile are shown as a black dashed lines. As can be seen, the signals overlap, indicating that Equation \ref{eqn:optalg} was optimally solved, and that the proposed inversion method works with synthetic inputs.
+
+<div>
+<img src="pics/pic3.png" width="85%">
+</div>
+<p>
+ <b>Figure 3:</b> Road profile used forverification: (a) synthetic road events, and (b) road events randomly distributed over a 50 m section. The original synthetic road profile and the filtered input signal are shown as a black line and a blue line, respectively.
 </p>
 
 ## Installation
