@@ -1,13 +1,22 @@
 # RIVA
 Road-profile Inversion based on in-Vehicle Accelerations (RIVA) is a MATLAB-package for road profile inversion from in-vehicle accelerometer readings.
 
-RIVA is based on matching measured vertical accelerations acquired over a specific road stretch with accelerations simulated by a calibrated quarter-car model. The matching is done with a PID control algorithm (see Figure 1), considering the road profile as an unknown 'input' and the measured accelerations as 'target' signal. In this approach, the physics of the quarter-car model governs the 'transfer function' relating input to output. A detailed description of the proposed methodology including model verification and validation of RIVA is presented in [Skar and Levenberg (2023)]. 
+The proposed framework for performing road profile inversion is visualized in Figure 1; the scheme refers to a passenger car that is instrumented with an accelerometer positioned near the centre-line close to the front axle. The inversion is achieved using a PID controller algorithm with the calibrated mechanical model; it can take any synthetic or field-measured acceleration and speed signal as input. The outcome of this process is followed by a filtering step to remove long wavelengths.
+
+<div>
+<img src="pics/RIVA_f1.png" width="85%">
+</div>
+<p>
+ <b>Figure 1:</b> Overview of the proposed method.
+</p>
+
+RIVA is based on matching measured vertical accelerations acquired over a specific road stretch with accelerations simulated by a calibrated quarter-car model. The matching is done with a PID control algorithm (see Figure 2), considering the road profile as an unknown 'input' and the measured accelerations as 'target' signal. In this approach, the physics of the quarter-car model governs the 'transfer function' relating input to output. A detailed description of the proposed methodology including model verification and validation of RIVA is presented in [Skar and Levenberg (2023)]. 
 
 <div>
 <img src="pics/RIVA_f2.png" width="85%">
 </div>
 <p>
- <b>Figure 1:</b> Block diagram of the closed feedback loop PID controller utilised in RIVA. 
+ <b>Figure 2:</b> Block diagram of the closed feedback loop PID controller utilized in RIVA. 
 </p>
 
 The components of the RIVA software is briefly described below:
@@ -22,7 +31,14 @@ The components of the RIVA software is briefly described below:
 *  `pid_control.mat` - road profile data.
 
 ## Synthetic example and verification
-The example script (i.e., 'main.m' script) provided is named 'RIVA_insilico.m'. This script provides a syntetic verification of the RIVA package. The purpose is to ensure that the proposed method can offer favorable convergence conditions for an optimization algorithm. Such a verification effort is a necessary first step before applying the profile inversion method to real field-collected data, that are noisy and may include errors. Hence, the script focuses on an ideal scenario where synthetically manufactured data is used as input
+The example script (i.e., 'main.m' script) provided is named 'RIVA_insilico.m'. This script provides a syntetic verification of the RIVA package. The purpose is to ensure that the proposed method can offer favorable convergence conditions for an optimization algorithm. Such a verification effort is needed as a first step before applying the method to field-collected data, that are noisy and may include errors. Hence, the script focuses on an ideal scenario where synthetically manufactured data is used as input, as shown in Figure 3a.
+
+<div>
+<img src="pics/pic1.png" width="85%">
+</div>
+<p>
+ <b>Figure 3:</b> Road profiles used forverification: (a) synthetic road events, and (b) road events randomly distributed over a 50 m section. The original synthetic road profile and the filtered input signal are shown as a black line and a grey line, respectively.
+</p>
 
 ## Installation
 * Download the package on your PC. 
