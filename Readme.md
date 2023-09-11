@@ -45,10 +45,10 @@ The script focuses on an ideal scenario where the data used as input is syntheti
 Figure 4 presents the outcome of the road profile inversion. The synthetically generated 'true' acceleration and the input road profile are shown as solid grey lines. The corresponding calculated acceleration and the inverted road profile are shown as a black dashed lines. 
 
 <div>
-<img src="pics/pic3.png" width="85%">
+<img src="pics/pic2.png" width="85%">
 </div>
 <p>
- <b>Figure 3:</b> Road profile used forverification: (a) synthetic road events, and (b) road events randomly distributed over a 50 m section. The original synthetic road profile and the filtered input signal are shown as a black line and a blue line, respectively.
+ <b>Figure 4:</b> Road profile used forverification: (a) synthetic road events, and (b) road events randomly distributed over a 50 m section. The original synthetic road profile and the filtered input signal are shown as a black line and a blue line, respectively.
 </p>
 
 As can be seen from Figure 4, the signals overlap, indicating that optimization problem was optimally solved.
