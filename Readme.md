@@ -4,7 +4,7 @@ Road-profile Inversion based on in-Vehicle Accelerations (RIVA) is a MATLAB-pack
 RIVA is based on matching measured vertical accelerations acquired over a specific road stretch with accelerations simulated by a calibrated quarter-car model. The matching is done with a PID control algorithm (see Figure 1), considering the road profile as an unknown 'input' and the measured accelerations as 'target' signal. In this approach, the physics of the quarter-car model governs the 'transfer function' relating input to output. A detailed description of the proposed methodology including model verification and validation of RIVA is presented in [Skar and Levenberg (2023)]. 
 
 <div>
-<img src="pics/RIVA_f2.png" width="90%">
+<img src="pics/RIVA_f2.png" width="75%">
 </div>
 <p>
  <b>Figure 1:</b> Block diagram of the closed feedback loop PID controller utilised in RIVA. 
