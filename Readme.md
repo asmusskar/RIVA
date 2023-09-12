@@ -1,3 +1,5 @@
+![GitHub](https://img.shields.io/github/license/asmusskar/RIVA)
+
 # RIVA
 <b>R</b>oad-profile <b>I</b>nversion based on in-<b>V</b>ehicle <b>A</b>ccelerations (RIVA) is a MATLAB package for road profile estimation based on data from vertical acceleration traces.
 
