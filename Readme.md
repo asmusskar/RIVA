@@ -18,11 +18,11 @@ The road profile inversion is based on matching measured vertical accelerations 
 <img src="pics/RIVA_f2.png" width="85%">
 </div>
 <p>
- <b>Figure 2:</b> Block diagram of the closed feedback loop PID controller utilized in RIVA. 
+ <b>Figure 2:</b> Block diagram of the closed feedback loop PID controller utilized in RIVA.
 </p>
 
 The components of the RIVA software is briefly described below:
-* `main.m` - main script for defining vehicle, importing accelerometer data, and post-processing of the results. 
+* `main.m` - main script for defining vehicle, importing accelerometer data, and post-processing of the results.
 
 * `qcar_acc_ms_tvar.m` - script for simulating a syntehtic acceleration trace based on a known vehicle and road profile.
 
@@ -56,7 +56,7 @@ Figure 4 presents the outcome of the road profile inversion; the synthetically g
 As can be seen from Figure 4, the signals overlap, indicating that the optimization problem was optimally solved.
 
 ## Real data and validation
-Road profile measurements and in-vehicle acceleration data collected to develope and validate RIVA (see [Skar and Levenberg (2023)]) are described in detail in [Skar et al. (2023)](https://doi.org/10.1016/j.dib.2023.109426) and can be accessed directly from https://doi.org/10.11583/DTU.c.6659909.
+Road profile measurements and in-vehicle acceleration data collected to develop and validate RIVA (see [Skar and Levenberg (2023)]) are described in detail in [Skar et al. (2023)](https://doi.org/10.1016/j.dib.2023.109426) and can be accessed directly from https://doi.org/10.11583/DTU.c.6659909.
 
 ## Installation
 * Download the package on your PC
