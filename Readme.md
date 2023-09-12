@@ -1,7 +1,7 @@
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/asmusskar/RIVA?include_prereleases) ![GitHub](https://img.shields.io/github/license/asmusskar/RIVA)
 
 # RIVA
-<b>R</b>oad-profile <b>I</b>nversion based on in-<b>V</b>ehicle <b>A</b>ccelerations (RIVA) is a MATLAB package for road profile estimation based on data from vertical acceleration traces.
+<b>R</b>oad profile <b>I</b>nversion based on in-<b>V</b>ehicle <b>A</b>ccelerations (RIVA) is a MATLAB package for road profile estimation based on data from vertical acceleration traces.
 
 The scheme in Figure 1 visualizes the framework of RIVA; it shows a vehicle with an accelerometer positioned near the center line, close to the front axle. The inversion is achieved using a PID controller algorithm with a calibrated quarter-car model; it can take any synthetic or field-measured acceleration and speed signal as input. The outcome of this process is followed by a filtering step to remove long wavelengths. A detailed description of RIVA, including model verification and validation, is presented in [Skar and Levenberg (2023)].
 
