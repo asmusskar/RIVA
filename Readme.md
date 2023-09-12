@@ -55,6 +55,9 @@ Figure 4 presents the outcome of the road profile inversion; the synthetically g
 
 As can be seen from Figure 4, the signals overlap, indicating that the optimization problem was optimally solved.
 
+## Validation based on real data
+Road profile measurements and in-vehicle acceleration data utilised to validate RIVA are described in detail in [Skar et al. (2023)](https://doi.org/10.1016/j.dib.2023.109426) and can be accessed directly from https://doi.org/10.11583/DTU.c.6659909.
+
 ## Installation
 * Download the package on your PC
 * Open MATLAB
@@ -78,4 +81,8 @@ Before contributing, please consider how your function fits into RIVA. At a mini
 
 # References
 Skar, Asmus and Levenberg, Eyal (2023). Road Profile Inversion from In-Vehicle Accelerometers. Transp. Eng. Part B Pavements (in press)
+
+Skar, A., Vestergaard, A. M., Brüsch, T., Pour, S., Kindler, E., Alstrøm, T. S., Schlotz, U., Larsen, J. E., & Pettinari, M. (2023). LiRA-CD: An open-source dataset for road condition modelling and research. Data in Brief, 49, [109426]. https://doi.org/10.1016/j.dib.2023.109426
+
+
 
