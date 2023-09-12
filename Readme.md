@@ -55,8 +55,8 @@ Figure 4 presents the outcome of the road profile inversion; the synthetically g
 
 As can be seen from Figure 4, the signals overlap, indicating that the optimization problem was optimally solved.
 
-## Validation based on real data
-Road profile measurements and in-vehicle acceleration data utilised to validate RIVA are described in detail in [Skar et al. (2023)](https://doi.org/10.1016/j.dib.2023.109426) and can be accessed directly from https://doi.org/10.11583/DTU.c.6659909.
+## Real data and validation
+Road profile measurements and in-vehicle acceleration data collected to develope and validate RIVA (see [Skar and Levenberg (2023)]) are described in detail in [Skar et al. (2023)](https://doi.org/10.1016/j.dib.2023.109426) and can be accessed directly from https://doi.org/10.11583/DTU.c.6659909.
 
 ## Installation
 * Download the package on your PC
