@@ -3,7 +3,7 @@
 # RIVA
 <b>R</b>oad profile <b>I</b>nversion based on in-<b>V</b>ehicle <b>A</b>ccelerations (RIVA) is a MATLAB package for road profile estimation based on data from vertical acceleration traces.
 
-The scheme in Figure 1 visualizes the framework of RIVA; it shows a vehicle with an accelerometer positioned near the center line, close to the front axle. The inversion is achieved using a PID controller algorithm with a calibrated quarter-car model; it can take any synthetic or field-measured acceleration and speed signal as input. The outcome of this process is followed by a filtering step to remove long wavelengths. A detailed description of RIVA, including model verification and validation, is presented in [Skar and Levenberg (2023)].
+The scheme in Figure 1 visualizes the framework of RIVA; it shows a vehicle with an accelerometer positioned near the center line, close to the front axle. The inversion is achieved using a PID controller algorithm with a calibrated quarter-car model; it can take any synthetic or field-measured acceleration and speed signal as input. The outcome of this process is followed by a filtering step to remove long wavelengths. A detailed description of RIVA, including model verification and validation, is presented in [Skar and Levenberg (2023)](https://doi.org/10.1061/JPEODX.PVENG-1385).
 
 <div>
 <img src="pics/RIVA_f1.png" width="85%">
@@ -56,7 +56,7 @@ Figure 4 presents the outcome of the road profile inversion; the synthetically g
 As can be seen from Figure 4, the signals overlap, indicating that the optimization problem was optimally solved.
 
 ## Real data and validation
-Road profile measurements and in-vehicle acceleration data collected to develop and validate RIVA (see [Skar and Levenberg (2023)]) are described in detail in [Skar et al. (2023)](https://doi.org/10.1016/j.dib.2023.109426) and can be accessed directly from https://doi.org/10.11583/DTU.c.6659909.
+Road profile measurements and in-vehicle acceleration data collected to develop and validate RIVA (see [Skar and Levenberg (2023)](https://doi.org/10.1061/JPEODX.PVENG-1385)) are described in detail in [Skar et al. (2023)](https://doi.org/10.1016/j.dib.2023.109426) and can be accessed directly from https://doi.org/10.11583/DTU.c.6659909.
 
 ## Installation
 * Download the package on your PC
@@ -80,7 +80,7 @@ RIVA_insilico
 Before contributing, please consider how your function fits into RIVA. At a minimum, functions must be well-documented and compatible with [OCTAVE](https://www.gnu.org/software/octave/index), not using any third party components. 
 
 # References
-Skar, Asmus and Levenberg, Eyal (2023). Road Profile Inversion from In-Vehicle Accelerometers. Transp. Eng. Part B Pavements (in press). https://doi.org/10.1061/JPEODX.PVENG-1385
+Skar, Asmus and Levenberg, Eyal (2023). Road Profile Inversion from In-Vehicle Accelerometers. Transp. Eng. Part B Pavements (in press). https://doi.org/10.1061/JPEODX.PVENG-1385 
 
 Skar, A., Vestergaard, A. M., Brüsch, T., Pour, S., Kindler, E., Alstrøm, T. S., Schlotz, U., Larsen, J. E., & Pettinari, M. (2023). LiRA-CD: An open-source dataset for road condition modelling and research. Data in Brief, 49, [109426]. https://doi.org/10.1016/j.dib.2023.109426
 
