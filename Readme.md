@@ -80,7 +80,7 @@ RIVA_insilico
 Before contributing, please consider how your function fits into RIVA. At a minimum, functions must be well-documented and compatible with [OCTAVE](https://www.gnu.org/software/octave/index), not using any third party components. 
 
 # References
-Skar, Asmus and Levenberg, Eyal (2023). Road Profile Inversion from In-Vehicle Accelerometers. Transp. Eng. Part B Pavements (in press). https://doi.org/10.1061/JPEODX.PVENG-1385 
+Skar, Asmus and Levenberg, Eyal (2023). Road Profile Inversion from In-Vehicle Accelerometers. Transp. Eng. Part B Pavements. https://doi.org/10.1061/JPEODX.PVENG-1385 
 
 Skar, A., Vestergaard, A. M., Brüsch, T., Pour, S., Kindler, E., Alstrøm, T. S., Schlotz, U., Larsen, J. E., & Pettinari, M. (2023). LiRA-CD: An open-source dataset for road condition modelling and research. Data in Brief, 49, [109426]. https://doi.org/10.1016/j.dib.2023.109426
 
